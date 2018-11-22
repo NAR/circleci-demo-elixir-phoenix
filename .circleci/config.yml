@@ -53,6 +53,6 @@ jobs:
       - run: mix test --cover
 
       - store_test_results:
-          path: _build/test/lib/hello_phoenix
+          path: _build/test/lib/hello_phoenix,
                 cover
 
