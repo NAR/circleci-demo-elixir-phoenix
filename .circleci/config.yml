@@ -54,5 +54,5 @@ jobs:
 
       - store_test_results:
           path: _build/test/lib/hello_phoenix
-          path: cover
+                cover
 
