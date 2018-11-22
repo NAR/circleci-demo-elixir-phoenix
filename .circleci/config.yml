@@ -50,7 +50,7 @@ jobs:
           name: Wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
 
-      - run: mix test --cover
+      - run: mix test --cover 2>&1 | ./gen_index.pl
 
       - store_artifacts:
           path: _build/test/lib/hello_phoenix
