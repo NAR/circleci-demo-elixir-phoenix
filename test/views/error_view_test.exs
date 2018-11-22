@@ -18,4 +18,9 @@ defmodule HelloPhoenix.ErrorViewTest do
     assert render_to_string(HelloPhoenix.ErrorView, "505.html", []) ==
            "Internal server error"
   end
+
+  test "break one test" do
+    assert render_to_string(HelloPhoenix.ErrorView, "505.html", []) ==
+           "Internal srv error"
+  end
 end
