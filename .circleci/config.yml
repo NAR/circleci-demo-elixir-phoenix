@@ -52,7 +52,14 @@ jobs:
 
       - run: mix test --cover
 
+      - store_artifacts:
+          path: _build/test/lib/hello_phoenix
+          destination: test_results
+
+      - store_artifacts:
+          path: cover
+          destination: coverage_results
+
       - store_test_results:
-          path: _build/test/lib/hello_phoenix,
-                cover
+          path: _build/test/lib/hello_phoenix
 
